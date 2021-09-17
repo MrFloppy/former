@@ -1,0 +1,22 @@
+{{define "mailsent"}}
+{{template "head" "Former - Mailtester"}}
+        <table>
+            <tr>
+                <td>Sender:</td>
+                <td>{{index . "sender"}}</td>
+            </tr>
+            <tr>
+                <td>Mail:</td>
+                <td>{{index . "email"}}</td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td>{{index . "subject"}}</td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>{{index . "message"}}</td>
+            </tr>
+        </table>
+{{template "foot"}}
+{{end}}

@@ -1,7 +1,5 @@
 {{define "mailform"}}
-<html>
-    <head></head>
-    <body>
+{{template "head" "Former - Mailform"}}
         <form method="post" action="/x/12345abcde">
             <fieldset>
                 <legend>Data Fields</legend>
@@ -16,6 +14,5 @@
             </fieldset>
             <input type="submit">
         </form>
-    </body>
-</html>
+{{template "foot"}}
 {{end}}

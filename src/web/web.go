@@ -55,8 +55,13 @@ func testmail(c echo.Context) error {
 }
 
 func sendMail(c echo.Context) error {
-	subject := c.FormValue("subject")
-	message := c.FormValue("message")
 
-	return c.String(http.StatusOK, subject+message)
+	post_data := map[string]interface{}{
+		"sender":  c.FormValue("sender"),
+		"email":   c.FormValue("mail"),
+		"subject": c.FormValue("subject"),
+		"message": c.FormValue("message"),
+	}
+
+	return c.Render(http.StatusOK, "mailsent", post_data)
 }
