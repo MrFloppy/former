@@ -37,7 +37,7 @@ func RunServer() {
 	e.Renderer = t
 
 	// Routes
-	e.GET("/", hello)
+	e.GET("/", index)
 	e.GET("/testmail", testmail)
 	e.POST("/x/*", sendMail)
 
@@ -46,12 +46,12 @@ func RunServer() {
 }
 
 // Handler
-func hello(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello, World!")
+func index(c echo.Context) error {
+	return c.Render(http.StatusOK, "index", "")
 }
 
 func testmail(c echo.Context) error {
-	return c.Render(http.StatusOK, "testmail", "World")
+	return c.Render(http.StatusOK, "mailform", "")
 }
 
 func sendMail(c echo.Context) error {

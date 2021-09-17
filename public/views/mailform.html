@@ -1,0 +1,21 @@
+{{define "mailform"}}
+<html>
+    <head></head>
+    <body>
+        <form method="post" action="/x/12345abcde">
+            <fieldset>
+                <legend>Data Fields</legend>
+                <label for="sender">Your Name:</label>
+                <input type="text" name="sender"><br><br>
+                <label for="mail">Your Mail:</label>
+                <input type="email" name="mail"><br><br>
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject"><br><br>
+                <label for="message">Your Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </fieldset>
+            <input type="submit">
+        </form>
+    </body>
+</html>
+{{end}}
